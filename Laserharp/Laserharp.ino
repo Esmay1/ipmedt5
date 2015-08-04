@@ -19,23 +19,23 @@ void loop() {
       int note;
       
     // Dit if statement checkt de eerste snaar (de sensoren zijn aangesloten op A poorten).
-    if (PINA & (1<<PA0))
-    {
-      // Als de poort een 0 is, dan speelt er een toon af. 
-      
-      note = 48; 
-           
-      MIDImessage(noteON, note, velocity);
-      do
-      {
-        delay(1);
-      } 
-      while (PINA & (1<<PA0));
-
-      MIDImessage(noteON, note, 0);
-
-    }
-
+//    if (PINA & (1<<PA0))
+//    {
+//      // Als de poort een 0 is, dan speelt er een toon af. 
+//      
+//      note = 48; 
+//           
+//      MIDImessage(noteON, note, velocity);
+//      do
+//      {
+//        delay(1);
+//      } 
+//      while (PINA & (1<<PA0));
+//
+//      MIDImessage(noteON, note, 0);
+//
+//      }
+//
     if (PINA & (1<<PA1))
     {
    
@@ -106,20 +106,20 @@ void loop() {
 
       MIDImessage(noteON, note, 0);
     }
-
-    if (PINA & (1<<PA6))
-    {
-      note = 59;
-      MIDImessage(noteON, note, velocity);
-      do
-      {
-        delay(1);
-      } 
-      while (PINA & (1<<PA6));
-
-      MIDImessage(noteON, note, 0);
-    }
-
+//
+//    if (PINA & (1<<PA6))
+//    {
+//      note = 59;
+//      MIDImessage(noteON, note, velocity);
+//      do
+//      {
+//        delay(1);
+//      } 
+//      while (PINA & (1<<PA6));
+//
+//      MIDImessage(noteON, note, 0);
+//    }
+//
     if (PINA & (1<<PA7))
     {
       note = 60;
